@@ -1,7 +1,9 @@
+import ProductsDashboard from "./pages/ProductsDashboard";
+
 function App() {
   return (
-    <div>
-      
+    <div className="container">
+      <ProductsDashboard />
     </div>
   );
 }
