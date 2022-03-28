@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { findProducts } from "../services/Products";
 
 
@@ -20,7 +20,11 @@ export function useSearch(entity) {
         }, 2000);
     }
 
+    useEffect(() => {
+        // lógica adicional con data
+    }, [data])
+
     const input = <input type="search" onChange={handleSearch}/> // JSX
 
-    return {input, data, isLoading};
+    return {input, data, isLoading}; // Devuelve objeto o array para consumir con desestructuring
 }
